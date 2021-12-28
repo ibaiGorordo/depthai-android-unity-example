@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        minSdk 28
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++14'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/CMakeLists.txt')
+            version '3.10.2'
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+
+afterEvaluate {
+    assembleDebug.finalizedBy(exportDebugAar)
+    assembleRelease.finalizedBy(exportReleaseAar)
+}
+
+task exportReleaseAar(type: Copy) {
+    from('build/outputs/aar/depthai-android-api-release.aar')
+    include('depthai-android-api-release.aar')
+    into('../../Unity Depthai Android Example/Assets/Plugins/Android')
+    rename('depthai-android-api-release.aar', 'depthai-android-api.aar')
+}
+
+task exportDebugAar(type: Copy) {
+    from('build/outputs/aar/depthai-android-api-debug.aar')
+    include('depthai-android-api-debug.aar')
+    into('../../Unity Depthai Android Example/Assets/Plugins/Android')
+    rename('depthai-android-api-debug.aar', 'depthai-android-api.aar')
+}
+task deleteOldAar(type: Delete) {
+    delete '../../Unity Depthai Android Example/Assets/Plugins/Android/depthai-android-api.aar'
+}
+exportDebugAar.dependsOn(deleteOldAar)
+exportReleaseAar.dependsOn(deleteOldAar)

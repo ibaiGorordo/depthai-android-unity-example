@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- specifying no attributes matches every device -->
+    <usb-device vendor-id="999" product-id="9349"/>
+<!--    <usb-device vendor-id="999" product-id="63035" />-->
+</resources>
