@@ -20,11 +20,11 @@ The repository contains both the Unity project to build the app and the Android 
 # Compiled App (.apk)
 
 If you want to download the app directly without having to compile the project. You can download it from here:
-## RGB + Disparity: 
-https://drive.google.com/file/d/123C3IWq9PXREUvQxnZZVgExs_eSnT-DM/view?usp=sharing
+ ### RGB + Disparity: 
+  https://drive.google.com/file/d/123C3IWq9PXREUvQxnZZVgExs_eSnT-DM/view?usp=sharing
 
-## Particle effect (Code coming soon): 
-https://drive.google.com/file/d/1lIXdfp9rvUkzu6UZXRzzD0vrC04hPNIr/view?usp=sharing
+ ### Particle effect (Code coming soon): 
+  https://drive.google.com/file/d/1lIXdfp9rvUkzu6UZXRzzD0vrC04hPNIr/view?usp=sharing
 
 # Android JNI Example
 - A similar example but using Android JNI instead of Unity: https://github.com/ibaiGorordo/depthai-android-jni-example
