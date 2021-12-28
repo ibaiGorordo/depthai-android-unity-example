@@ -12,6 +12,10 @@ The repository contains both the Unity project to build the app and the Android 
 - **Unity Depthai Android Example**: Unity project with the example scene to build the Android app. **Important** - Switch to Android before building.
 - **depthai-android-api**: Android Studio project to buid the Android library (.aar) for Unity. The project contains and empty app (ignore it) and an Android library **depthai-android-api**. Press the hammer (Make project) in Android Studio to build the library. The compiled library (.aar) will be automatically copied into the Plugins folder of the Unity project.
 
+# Compiled App (.apk)
+If you want to download the app directly without having to compile the project. You can download it from here: 
+https://drive.google.com/file/d/123C3IWq9PXREUvQxnZZVgExs_eSnT-DM/view?usp=sharing
+
 # Android JNI Example
 - A similar example but using Android JNI instead of Unity: https://github.com/ibaiGorordo/depthai-android-jni-example
 
