@@ -1,7 +1,12 @@
 # depthai-android-unity-example
  Unity project (built with Unity 2020.3.25f1) with an example on how to run the depthai library in Android.
 
+![!depthai unity particle example android](https://github.com/ibaiGorordo/depthai-android-unity-example/blob/main/doc/img/depthai_unity_android_particle_example.gif)
+
 ![!depthai unity example android](https://github.com/ibaiGorordo/depthai-android-unity-example/blob/main/doc/img/depthai_unity_android_example.gif)
+
+
+
 
 # Important 
 - This example is a simple example to show how to use the depthai library in Android with Unity. For a proper support of the library in Unity, check the official **depthai unity** library (link below).
@@ -13,8 +18,13 @@ The repository contains both the Unity project to build the app and the Android 
 - **depthai-android-api**: Android Studio project to buid the Android library (.aar) for Unity. The project contains and empty app (ignore it) and an Android library **depthai-android-api**. Press the hammer (Make project) in Android Studio to build the library. The compiled library (.aar) will be automatically copied into the Plugins folder of the Unity project.
 
 # Compiled App (.apk)
-If you want to download the app directly without having to compile the project. You can download it from here: 
+
+If you want to download the app directly without having to compile the project. You can download it from here:
+## RGB + Disparity: 
 https://drive.google.com/file/d/123C3IWq9PXREUvQxnZZVgExs_eSnT-DM/view?usp=sharing
+
+## Particle effect (Code coming soon): 
+https://drive.google.com/file/d/1lIXdfp9rvUkzu6UZXRzzD0vrC04hPNIr/view?usp=sharing
 
 # Android JNI Example
 - A similar example but using Android JNI instead of Unity: https://github.com/ibaiGorordo/depthai-android-jni-example
